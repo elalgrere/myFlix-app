@@ -84,8 +84,8 @@ app.post('/users', (req,res) =>{
   } else {
     res.satuts(400).json('users need names')
   }
-  }
-  )
+})
+
 //UPDATE
 app.put('/users/:id', (req,res) =>{
   const {id} = req.params;
@@ -98,21 +98,21 @@ app.put('/users/:id', (req,res) =>{
   } else{
     res.status(400).send ('no such user')
   }
-  }
-  )
+})
+
   //CREATE
   app.post('/users/:id/:movieTitle', (req,res) =>{
     const {id, movieTitle} = req.params;
     const updatedUser = req.body;
     let user = users.find (user => user.id == id);
-    if (user){
+  if (user){
       user.favoriteMovies.push(movieTitle);
       res.sattus(200).send(`$(movieTitle) has been added to user ${id}'s array`);;
-    } else{
+  } else{
       res.status(400).send ('no such user')
-    }
-    }
-    )
+  }
+})
+
   //DELETE
   app.post('/users/:id/:movieTitle', (req,res) =>{
     const {id, movieTitle} = req.params;
@@ -124,8 +124,8 @@ app.put('/users/:id', (req,res) =>{
     } else{
         res.status(400).send ('no such user')
     }
-    }
-    )
+})
+
     //DELETE
   app.post('/users/:id/:movieTitle', (req,res) =>{
     const {id, movieTitle} = req.params;
@@ -137,48 +137,47 @@ app.put('/users/:id', (req,res) =>{
     } else{
         res.status(400).send ('no such user')
     }
-    }
-    )
+})
+
 
 
 //READ
   app.get('/movies', (req,res) => {
     res.status =(200) .json(movies);
-})
+    })
 //READ
   app.get('/movies/:title', (req,res) =>{
    const {title} = req.params;
    const movie = movies.find(movie => movie.Title ===title);
    if (movie){
     res.status(200).json(movie);
-}  else {
+    }  else {
     res.satatus(400).send('no such a movie fund')
-}
-   }
-)
+    }
+})
+
 //READ
   app.get('/movies/genre/:genreName', (req,res) =>{
   const {genreName} = req.params;
   const movie = movies.find(movie => Genre.Name ===genreName).Genre;
   if (genre){
    res.status(200).json(genre);
-}  else {
+    }  else {
    res.satatus(400).send('no such a genre fund')
-}
-  }
+    }
+})
 
-)
 //READ
   app.get('/movies/directors/:directorName', (req,res) =>{
   const {directorName} = req.params;
   const movie = movies.find(movie => Director.Name ===directorName).Director;
   if (genre){
    res.status(200).json(director);
-}  else {
+    }  else {
    res.satatus(400).send('no such a director fund')
-}
-  }
-)
+    }
+})
+
 
 
   app.listen(8080,() => console.log('listen on 8080'))
