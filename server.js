@@ -141,11 +141,11 @@ app.put('/users/:id', (req,res) =>{
     )
 
 
-//RED
+//READ
   app.get('/movies', (req,res) => {
     res.status =(200) .json(movies);
 })
-//RED
+//READ
   app.get('/movies/:title', (req,res) =>{
    const {title} = req.params;
    const movie = movies.find(movie => movie.Title ===title);
@@ -156,7 +156,7 @@ app.put('/users/:id', (req,res) =>{
 }
    }
 )
-//RED
+//READ
   app.get('/movies/genre/:genreName', (req,res) =>{
   const {genreName} = req.params;
   const movie = movies.find(movie => Genre.Name ===genreName).Genre;
@@ -168,7 +168,7 @@ app.put('/users/:id', (req,res) =>{
   }
 
 )
-//RED
+//READ
   app.get('/movies/directors/:directorName', (req,res) =>{
   const {directorName} = req.params;
   const movie = movies.find(movie => Director.Name ===directorName).Director;
