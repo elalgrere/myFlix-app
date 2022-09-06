@@ -4,16 +4,6 @@ const uuid = require("uuid");
 const app = express();
 app.use(bodyParser.json);
 
-
-
-
-
-
-
-
-
-
-
 let users = [
     {
       name: 'Isabel',
