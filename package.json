@@ -1,7 +1,6 @@
 {
   "name": "myflix-app",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,5 +18,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elalgrere/myFlix-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elalgrere/myFlix-app/issues"
+  },
+  "homepage": "https://github.com/elalgrere/myFlix-app#readme",
+  "description": ""
 }

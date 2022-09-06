@@ -3,7 +3,7 @@ const express = require('express');
       bodyParser = require('body-parser'),
       uuid = require('uuid');
       app.use(bodyParser.json);
-      app = express();
+const app = express();
 let users = [
     {
       name: 'Isabel',
