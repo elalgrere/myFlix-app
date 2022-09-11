@@ -4,8 +4,7 @@ const Models = require('./models.js');
 const Movies = Models.Movie;
 const Users = Models.User;
 
-const mongoose = require('mongoose');
-let movisSchema = mongoose.Schema({
+let movieSchema = mongoose.Schema({
     Title: {type: String, rquired: true},
     Description: {Type: String, requiered: true},
     Genre: {
@@ -26,7 +25,7 @@ let userSchema= mongoose.Schema({
     Password: {type: String, required: true},
     Email: {type: String, reuired: true},
     Birthday: Date,
-    FavoriteMovies: [{type: mongoose.Schema.Types.ObjectID, ref: 'Movie'}]
+    FavoriteMovies: [{type: mongoose.Schema.types.ObjectID, ref: 'Movie'}]
 });
 
 let Movie = mongoose.model('Movie', movieSchema);
