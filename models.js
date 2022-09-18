@@ -19,7 +19,6 @@ Actors: [String],
 ImagePath: String,
 Featured: Boolean
 });
-
 let userSchema= mongoose.Schema({
     Username: {type: String, required: true},
     Password: {type: String, required: true},
